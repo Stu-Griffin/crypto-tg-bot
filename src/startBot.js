@@ -11,8 +11,8 @@ function startBot(bot) {
 			if(binance && advCash) {
 				console.log('got data');
 				const result = advCash - binance;
-				const request = await axios.get(`${process.env.API_URL}/api/bot-users`);
 				if(result >= 0.15) {
+					const request = await axios.get(`${process.env.API_URL}/api/bot-users`);
 					saveData({
 						binance:binance,
 						advcash:advCash,
